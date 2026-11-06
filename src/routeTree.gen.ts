@@ -13,6 +13,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AssemblyRouteImport } from './routes/assembly'
 import { Route as BenchmarksRouteImport } from './routes/benchmarks'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as ExportRouteImport } from './routes/export'
+import { Route as StatisticsRouteImport } from './routes/statistics'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +36,32 @@ const DashboardRoute = DashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExportRoute = ExportRouteImport.update({
+  id: '/export',
+  path: '/export',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StatisticsRoute = StatisticsRouteImport.update({
+  id: '/statistics',
+  path: '/statistics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/assembly': typeof AssemblyRoute
   '/benchmarks': typeof BenchmarksRoute
   '/dashboard': typeof DashboardRoute
+  '/export': typeof ExportRoute
+  '/statistics': typeof StatisticsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/assembly': typeof AssemblyRoute
   '/benchmarks': typeof BenchmarksRoute
   '/dashboard': typeof DashboardRoute
+  '/export': typeof ExportRoute
+  '/statistics': typeof StatisticsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +69,24 @@ export interface FileRoutesById {
   '/assembly': typeof AssemblyRoute
   '/benchmarks': typeof BenchmarksRoute
   '/dashboard': typeof DashboardRoute
+  '/export': typeof ExportRoute
+  '/statistics': typeof StatisticsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/assembly' | '/benchmarks' | '/dashboard'
+  fullPaths:
+    '/' | '/assembly' | '/benchmarks' | '/dashboard' | '/export' | '/statistics'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/assembly' | '/benchmarks' | '/dashboard'
-  id: '__root__' | '/' | '/assembly' | '/benchmarks' | '/dashboard'
+  to:
+    '/' | '/assembly' | '/benchmarks' | '/dashboard' | '/export' | '/statistics'
+  id:
+    | '__root__'
+    | '/'
+    | '/assembly'
+    | '/benchmarks'
+    | '/dashboard'
+    | '/export'
+    | '/statistics'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +94,8 @@ export interface RootRouteChildren {
   AssemblyRoute: typeof AssemblyRoute
   BenchmarksRoute: typeof BenchmarksRoute
   DashboardRoute: typeof DashboardRoute
+  ExportRoute: typeof ExportRoute
+  StatisticsRoute: typeof StatisticsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +128,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/export': {
+      id: '/export'
+      path: '/export'
+      fullPath: '/export'
+      preLoaderRoute: typeof ExportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/statistics': {
+      id: '/statistics'
+      path: '/statistics'
+      fullPath: '/statistics'
+      preLoaderRoute: typeof StatisticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +150,8 @@ const rootRouteChildren: RootRouteChildren = {
   AssemblyRoute: AssemblyRoute,
   BenchmarksRoute: BenchmarksRoute,
   DashboardRoute: DashboardRoute,
+  ExportRoute: ExportRoute,
+  StatisticsRoute: StatisticsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

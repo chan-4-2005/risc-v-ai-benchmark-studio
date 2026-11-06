@@ -139,7 +139,7 @@ function Dashboard() {
           </p>
         </Panel>
 
-        <Panel title={`Per-benchmark scalar throughput · LLVM wins ${wins}/88`}>
+        <Panel title={`Per-benchmark scalar throughput · LLVM wins ${wins}/85`}>
           <div className="h-72">
             <ResponsiveContainer>
               <ScatterChart>

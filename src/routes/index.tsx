@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "rvAIbench — GCC vs LLVM for AI on RISC-V" },
-      { name: "description", content: "Explore 88 AI microbenchmarks, assembly, statistics and reproduction kits comparing GCC 15.1 and LLVM 21.1 on RV64GC/RV64GCV." },
+      { name: "description", content: "Explore 85 AI microbenchmarks, assembly, statistics and reproduction kits comparing GCC 15.1 and LLVM 21.1 on RV64GC/RV64GCV." },
       { property: "og:title", content: "rvAIbench — GCC vs LLVM for AI on RISC-V" },
       { property: "og:description", content: "Interactive workbench for the RISC-V AI compiler performance study." },
       { property: "og:type", content: "website" },
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 const MODULES = [
-  { to: "/benchmarks", icon: Layers, title: "Benchmark Suite Explorer", text: "All 88 kernels with C source, parameters and complexity." },
+  { to: "/benchmarks", icon: Layers, title: "Benchmark Suite Explorer", text: "All 85 kernels with C source, parameters and complexity." },
   { to: "/dashboard", icon: BarChart3, title: "Performance Dashboard", text: "Category throughput, radar profiles and vector divergence." },
   { to: "/assembly", icon: Binary, title: "Assembly Inspector", text: "GCC vs LLVM RISC-V code for GEMM, Sigmoid, SAXPY, reductions." },
   { to: "/statistics", icon: Calculator, title: "Statistics Studio", text: "Welch's t, Cohen's d, CIs and QEMU↔BeagleV correlation." },
@@ -35,7 +35,7 @@ function Index() {
             Which compiler should run your AI workloads on <span className="text-primary">RISC-V</span>?
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            A workbench for the GCC vs LLVM study: {TOOLCHAIN.gcc} against {TOOLCHAIN.llvm}, 88 microbenchmarks, {TOOLCHAIN.qemu}, validated on BeagleV-Ahead hardware.
+            A workbench for the GCC vs LLVM study: {TOOLCHAIN.gcc} against {TOOLCHAIN.llvm}, 85 microbenchmarks, {TOOLCHAIN.qemu}, validated on BeagleV-Ahead hardware.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link to="/dashboard" className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90">

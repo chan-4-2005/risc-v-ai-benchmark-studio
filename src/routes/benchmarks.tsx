@@ -11,7 +11,7 @@ export const Route = createFileRoute("/benchmarks")({
   head: () => ({
     meta: [
       { title: "Benchmark Suite Explorer — rvAIbench" },
-      { name: "description", content: "Browse all 88 RISC-V AI microbenchmarks with C kernels, parameter controls and complexity." },
+      { name: "description", content: "Browse all 85 RISC-V AI microbenchmarks with C kernels, parameter controls and complexity." },
       { property: "og:title", content: "Benchmark Suite Explorer — rvAIbench" },
       { property: "og:description", content: "88 matrix, neural, vector and memory kernels with live C source generation." },
       { property: "og:type", content: "website" },
@@ -44,7 +44,7 @@ function BenchmarksPage() {
   return (
     <div>
       <PageHeader eyebrow="Module 01" title="Benchmark Suite Explorer">
-        88 microbenchmarks across four AI workload categories. Pick a kernel, tune its parameters and the C source regenerates instantly.
+        85 microbenchmarks across four AI workload categories. Pick a kernel, tune its parameters and the C source regenerates instantly.
       </PageHeader>
 
       <div className="mb-4 flex flex-wrap items-center gap-2">
@@ -54,7 +54,7 @@ function BenchmarksPage() {
             onClick={() => setCat(k)}
             className={cn("rounded-full border px-3 py-1 font-mono text-xs", cat === k ? "border-primary bg-primary text-primary-foreground" : "border-border text-muted-foreground hover:text-foreground")}
           >
-            {k === "all" ? `All · 88` : `${CATEGORIES[k].label} · ${CATEGORIES[k].n}`}
+            {k === "all" ? `All · 85` : `${CATEGORIES[k].label} · ${CATEGORIES[k].n}`}
           </button>
         ))}
         <div className="relative ml-auto">

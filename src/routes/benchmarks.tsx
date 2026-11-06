@@ -63,7 +63,7 @@ function BenchmarksPage() {
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
+      <div className="grid min-w-0 gap-6 lg:grid-cols-[240px_minmax(0,1fr)]">
         <div className="max-h-[78vh] overflow-y-auto rounded-lg border border-border bg-card">
           {list.map((b) => (
             <button
@@ -81,7 +81,7 @@ function BenchmarksPage() {
           {list.length === 0 && <div className="p-4 text-sm text-muted-foreground">No kernels match.</div>}
         </div>
 
-        <div className="space-y-6">
+        <div className="min-w-0 space-y-6">
           <Panel>
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
@@ -89,7 +89,7 @@ function BenchmarksPage() {
                 <h2 className="mt-1 text-2xl font-bold">{sel.name}</h2>
                 <p className="mt-1 text-sm text-muted-foreground">{sel.description}</p>
               </div>
-              <div className="flex gap-4 font-mono text-sm">
+              <div className="flex min-w-0 flex-wrap gap-x-4 gap-y-2 font-mono text-sm">
                 <div><div className="text-[10px] uppercase text-muted-foreground">Time</div>{sel.complexity}</div>
                 <div><div className="text-[10px] uppercase text-muted-foreground">Space</div>{sel.memory}</div>
                 <div><div className="text-[10px] uppercase text-muted-foreground">Ops/call</div>{sel.ops}</div>

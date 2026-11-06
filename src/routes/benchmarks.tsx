@@ -115,7 +115,7 @@ function BenchmarksPage() {
             </div>
           </Panel>
 
-          <div className="grid gap-6 xl:grid-cols-[1fr_300px]">
+          <div className="space-y-6">
             <Panel
               title={`${sel.id}.c`}
               action={

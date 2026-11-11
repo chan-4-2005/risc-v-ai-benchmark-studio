@@ -9,15 +9,7 @@ The platform should include:
 4. Statistical Analysis & Hardware Validation Studio: Interactive calculator and validator replicating the paper's Welch's t-test, Cohen's d effect sizes, and the QEMU vs BeagleV physical hardware correlation (r=0.87), allowing users to input or simulate custom benchmark runs.
 5. Code & Environment Export Center: One-click export and download of ready-to-run C source files, Makefile with the exact compiler flags (-O3 -march=rv64gc / -march=rv64gcv -mabi=lp64d), Dockerfile preconfigured with QEMU 8.2 and RISC-V GCC/LLVM toolchains, and the Python statistical analysis script.
 
-This project was built with [Lovable](https://lovable.dev).
 
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d9b7c1ff-7672-4ddf-9a0e-a58ff215c78f).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 

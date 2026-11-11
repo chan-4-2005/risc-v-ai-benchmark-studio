@@ -126,7 +126,14 @@ function BenchmarksPage() {
             >
               <CodeBlock code={src} />
             </Panel>
-            <Panel title="Throughput (M ops/s)">
+            <Panel
+              title="Throughput (M ops/s)"
+              action={
+                <span className="font-mono text-[10px] text-muted-foreground">
+                  Ref Config (N=1024, TILE=64)
+                </span>
+              }
+            >
               <div className="h-64">
                 <ResponsiveContainer>
                   <BarChart data={perf}>
@@ -141,7 +148,7 @@ function BenchmarksPage() {
                 </ResponsiveContainer>
               </div>
               <p className="mt-2 text-[11px] text-muted-foreground">
-                Simulated per-kernel values calibrated to the paper's category means (Table IV) and vector impact (Table VI).
+                Values reflect the paper's reference configuration (N=1024, TILE=64, VLEN=256) calibrated to category means (Table IV) and vector impact (Table VI). Throughput varies per kernel; parameter controls customize the generated C source code.
               </p>
             </Panel>
           </div>

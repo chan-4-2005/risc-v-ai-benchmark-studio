@@ -1,6 +1,12 @@
 # RISC-V AI Benchmark Studio
 
-Build an interactive RISC-V AI compiler benchmark platform and workbench based on the attached research paper 'Compiler Performance Analysis for AI Workloads on RISC-V: A Comprehensive Comparison of GCC and LLVM'.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://risc-v-ai-benchmark-studio.vercel.app/)
+
+> 🌐 **Live Web Version:** Explore the interactive platform live in your browser:  
+> 👉 **[https://risc-v-ai-benchmark-studio.vercel.app/](https://risc-v-ai-benchmark-studio.vercel.app/)**  
+> *(No local installation or RISC-V hardware needed — browse all 85 microbenchmarks, tune parameters, inspect side-by-side assembly, and explore performance statistics directly on the web.)*
+
+Build an interactive RISC-V AI compiler benchmark platform and workbench based on the research paper 'Compiler Performance Analysis for AI Workloads on RISC-V: A Comprehensive Comparison of GCC and LLVM'.
 
 The platform should include:
 1. Complete Benchmark Suite Explorer: Browse all 85 microbenchmarks across the 4 categories (Matrix Operations n=19, Neural Network Primitives n=19, Vector Computations n=23, Memory Access Patterns n=24) with full C implementation kernels, parameter controls (dimensions, tile sizes, activation functions, vector lengths), and theoretical complexity.
